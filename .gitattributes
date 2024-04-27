@@ -1,0 +1,2 @@
+Lab[[:space:]]9/Solutions/q1/data/mnist.pkl filter=lfs diff=lfs merge=lfs -text
+Lab[[:space:]]7/data.pkl filter=lfs diff=lfs merge=lfs -text
