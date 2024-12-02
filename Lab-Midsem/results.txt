@@ -1,0 +1,23 @@
+Q2 Tests:
+=========================================
+Passed: test_q2_update_parameters_1
+Marks: 5
+=========================================
+Passed: test_q2_update_parameters_2
+Marks: 5
+=========================================
+Epoch 0, Cost: 0.6931471805599467
+Epoch 100, Cost: 0.6857534478774097
+Epoch 200, Cost: 0.6838955291072801
+Epoch 300, Cost: 0.6831821526001156
+Epoch 400, Cost: 0.6827648299539425
+Epoch 500, Cost: 0.6824479536376982
+Epoch 600, Cost: 0.6821807413913423
+Epoch 700, Cost: 0.6819474421000513
+Epoch 800, Cost: 0.6817414127472736
+Epoch 900, Cost: 0.6815586786750939
+Test Accuracy: 53.0%
+Passed: test_q2_accuracy_on_test_set
+Marks: 3
+=========================================
+Total Marks: 13

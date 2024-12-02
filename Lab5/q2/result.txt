@@ -1,0 +1,11 @@
+Epoch: 0, Decision Boundary: [-2.7077458  -4.26317976 -0.999     ]
+Epoch: 5, Decision Boundary: [-2.78737478 -4.5122618  -0.999     ]
+Epoch: 10, Decision Boundary: [-2.47715391 -3.38210792 -0.999     ]
+Epoch: 15, Decision Boundary: [-3.64683038 -4.24114023 -0.999     ]
+Epoch: 20, Decision Boundary: [-3.09839952 -4.31107852 -0.999     ]
+Epoch: 25, Decision Boundary: [-3.24364107 -3.21344999 -0.999     ]
+Epoch: 30, Decision Boundary: [-2.98892811 -3.71677713 -0.999     ]
+Epoch: 35, Decision Boundary: [-3.21380895 -3.78733293 -0.999     ]
+Epoch: 40, Decision Boundary: [-2.55496348 -3.33712265 -0.999     ]
+Epoch: 45, Decision Boundary: [-2.95634742 -3.85643591 -0.999     ]
+Prediction test accuracy: 0.4113

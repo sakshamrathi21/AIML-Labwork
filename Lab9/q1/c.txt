@@ -1,0 +1,46 @@
+def backward(self, output_error, learning_rate):
+        '''
+        Args:
+            output_error : 3D numpy array of shape (num_filters, height - filter_size + 1, width - filter_size + 1)
+            learning_rate : float
+        
+        Returns:
+            input_error : 2D numpy array of shape (height, width)
+        '''
+        input_error = None
+
+        ## TODO
+        filter_error = np.zeros_like(self.conv_filter)
+        for f in range(self.num_filters):
+            for i in range(np.shape(filter_error)[1]):
+                for j in range(np.shape(filter_error)[2]):
+                    filter_error[f,i,j] = np.sum(self.input[i:i+np.shape(output_error)[1],j:j+np.shape(output_error)[2]]*output_error[f])    
+        bias_error = np.zeros_like(self.bias)
+        for f in range(self.num_filters):
+            bias_error[f] = np.sum(output_error[f])
+        # print(bias_error)
+        self.conv_filter -= learning_rate*filter_error
+        self.bias -= learning_rate*bias_error
+
+        input_error = np.zeros_like(self.input)
+        # print(np.shape(output_error))
+        padded_output_error = np.pad(output_error, ((0, 0), (self.filter_size - 1, self.filter_size - 1), (self.filter_size - 1, self.filter_size - 1)), mode='constant')
+        # print(np.shape(padded_output_error))
+        # print(np.shape(self.conv_filter))
+        # print(self.conv_filter[0])
+        # print("hello")
+        # rotated_filter = np.rot90(self.conv_filter, 2, axes=(1, 2))
+        # print(rotated_filter[0])
+        # print(np.shape(input_error))
+
+        for f in range(self.num_filters):
+            for i in range(self.filter_size):
+                for j in range(self.filter_size):
+                    input_error += padded_output_error[f, i:i+self.input.shape[0], j:j+self.input.shape[1]] * rotated_filter[f, i, j]
+
+        ## END TODO
+
+        assert input_error.shape == self.input.shape
+
+        return input_error
+    
